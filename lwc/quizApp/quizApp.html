@@ -1,0 +1,45 @@
+<template>
+<lightning-card title="How much you know about Venky :)">
+    <div class="slds-m-around_medium">
+        <template if:true={isSubmited}>
+            <div class={isScoredFull}> You have scored {correctAnswer} out of {questionList.length}</div>
+        </template>
+        <form>
+    <template for:each={questionList} for:item="question" for:index="index" >
+        <div key={question.id}>
+            <strong>{question.id}. {question.question}</strong>
+            <div class="slds-grid slds-grid_vertical slds-p-around_medium lgc-bg">
+                <div class="slds-col">
+                        <lightning-input type="radio" name={question.id} value="a" label={question.answers.a} onclick={changeHandler}></lightning-input>
+                </div>
+                <div class="slds-col">
+                        <lightning-input type="radio" name={question.id} value="b" label={question.answers.b} onclick={changeHandler}></lightning-input>
+                </div>
+                <div class="slds-col">
+                        <lightning-input type="radio" name={question.id} value="c" label={question.answers.c} onclick={changeHandler}></lightning-input>
+                </div>
+                <div class="slds-col">
+                        <lightning-input type="radio" name={question.id} value ="d" label={question.answers.d} onclick={changeHandler}></lightning-input>
+                </div>
+              </div>
+        </div>
+    </template>
+    <lightning-button 
+        variant="brand" 
+        label="Submit" 
+        type="submit" 
+        onclick={submitHandleClick} 
+        disabled={isAllSelected}
+        class="slds-m-around_small">
+    </lightning-button>
+    <lightning-button 
+        variant="destructive" 
+        label="Reset" 
+        type="reset" 
+        onclick={resetHandleClick} 
+        class="slds-m-around_small">
+    </lightning-button>
+    </form>
+    </div>
+</lightning-card>
+</template>

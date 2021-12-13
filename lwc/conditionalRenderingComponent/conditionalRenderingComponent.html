@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Please type `Delete` to Delete the item you have selected" onkeyup={callMe}></lightning-input>
+    </div>
+    <template if:true={isVisible}>
+        <div> Click on the button to delete, this action cannot be undo.</div>
+        <lightning-button variant="destructive" label="Destructive" title="Destructive action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </template>
+</lightning-card>
+</template>

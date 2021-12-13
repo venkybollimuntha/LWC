@@ -1,0 +1,23 @@
+<template>
+    <div>
+    <lightning-card  title="HelloWorld component">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Course Name" onkeyup = {changeHandler}></lightning-input>
+        </div>
+        <div> {fullname} is a course of {title}</div>  
+    </lightning-card>
+    </div>
+
+
+    <div>
+        <lightning-card  title="HelloWorld component">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Enter city Name" onkeyup = {changeAddress}></lightning-input>
+            </div>
+            <div> {data.city} is a City</div>  
+        </lightning-card>
+        </div>
+    
+    
+
+</template>

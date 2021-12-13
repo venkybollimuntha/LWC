@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Accessing DOM elements">
+        <div class="slds-var-m-around_medium">
+            <p> This is the P tag</p>
+            <template for:each={names} for:item="name">
+                <div class='name' key={name}>
+                    {name}
+                </div>
+            </template>
+            <div class="child"></div>
+            <button onclick={fetchDetails}> Fetch details</button>
+
+        </div>
+
+    </lightning-card>
+</template>

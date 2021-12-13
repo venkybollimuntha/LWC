@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Dynamic CSS">
+        <lightning-input type='number' value={percent} lable="Percentage" onkeyup={changeHandler}></lightning-input>
+        <div class="slds-var-m-around_medium">
+            <div style={getPercent}>
+                Increase number to fill color
+            </div>
+           
+        </div>
+
+    </lightning-card>
+</template>

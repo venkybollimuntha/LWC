@@ -1,0 +1,6 @@
+@import 'c/commonCssLibrary';
+
+.css{
+    width:90%;
+    background-color:yellow;
+}

@@ -1,0 +1,27 @@
+
+/* Best practices to use only three ways
+    1. elements
+    2. class eg: using . notation
+    3. psuedo class eg:hover */
+
+
+p{
+    color:red;
+    font-size: 30px;
+    border: 1px solid red;
+}
+
+/* Applying styling to the mydiv tag */
+.myDiv{
+    color:green;
+    font-style: italic;
+    
+    
+}
+/* This css will apply when we hover the mouse on this tag */
+.myDiv:hover{
+    color:yellow;
+    font-size:50px;
+
+}
+
